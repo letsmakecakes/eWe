@@ -1,0 +1,86 @@
+{% extends "adminmaster.html" %}
+{% block body%}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+    <style type="text/css">
+    li {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: dodgerblue;
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
+}
+
+li::before{
+  content: '';
+  position: absolute;
+  top: .9em;
+  left: -4em;
+  width: 4em;
+  height: .2em;
+  background: dodgerblue;
+  z-index: -1;
+}
+
+
+li:first-child::before {
+  display: none;
+}
+
+.active {
+  background: dodgerblue;
+}
+
+.active ~ li {
+  background: lightblue;
+}
+
+.active ~ li::before {
+  background: lightblue;
+}
+
+</style>
+</head>
+
+<body>
+{% include "userheader.html" %}
+<form action="/otppost" method="post">
+<table width="500" height="200" align="center">
+  <tr>
+    <th scope="row">Enter OTP</th>
+    <td><input type="text" name="textfield" id="textfield" class="form-control" required /></td>
+  </tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+    <td align="center"><input type="submit" name="button" id="button" value="SUBMIT" class="btn btn-primary" /></td>
+  </tr>
+</table>
+
+</form>
+
+<table align="center">
+    <tr>
+        <th></th>
+        <td>
+            <ul>
+  <li >1</li>
+  <li>2</li>
+  <li class="active">3</li>
+
+</ul>
+        </td>
+    </tr>
+</table>
+{% include "footer.html" %}
+</body>
+</html>
+{% endblock %}
