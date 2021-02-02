@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>{% include "entheader.html" %}
+
+<form id="form1" name="form1" method="post" action="/etraining_feedback1">
+  <table border="0" align="center" height="250" width="450">
+    <tbody>
+      <tr>
+        <th  scope="row">Session Name</th>
+        <td ><label for="textfield"></label>
+        <input type="text" name="ettextfield" id="textfield" required class="form-control"></td>
+      </tr>
+      <tr>
+        <th  scope="row">Trainee</th>
+        <td><label for="textfield2"></label>
+        <input type="text" name="ettextfield2" id="textfield2" required class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row">Feedback</th>
+        <td><label for="textarea"></label>
+        <textarea name="ettextarea" id="textarea" required class="form-control"></textarea></td>
+      </tr>
+      <tr>
+        <th scope="row">Rating</th>
+        <td><label for="select">Select</label>
+          <select name="etselect" id="select" class="form-control">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td align="center"><input type="submit" name="etsubmit" id="submit" value="Submit" class="btn btn-success"></td>
+        <td align="center"><input type="submit" name="etsubmit" id="button" value="Cancel" class="btn btn-warning"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+
+</body>
+</html>

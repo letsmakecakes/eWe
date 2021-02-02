@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<body>
+{% include "entheader.html" %}
+<form id="form1" name="form1" method="post">
+  <table width="200" border="0" class="table table-dark" align="center">
+    <tbody>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Session Name</th>
+        <th scope="col">Session details</th>
+        <th scope="col">Trainee</th>
+        <th scope="col">More</th>
+      </tr>
+    {% for i in data %}
+    <tr>
+        <th scope="col">{{ loop.index }}</th>
+        <th scope="col">{{ i['session_name'] }}</th>
+        <th scope="col">{{ i['session_details'] }}</th>
+        <th scope="col">{{ i['trainee'] }}</th>
+        <th scope="col"><a href="/trainingg1/{{ i['session_no'] }}" class="btn btn-primary">Give feedback</a> </th>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+
+</body>
+</html>

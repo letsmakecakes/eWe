@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>{% include "entheader.html" %}
+<form method="post" enctype="multipart/form-data" action="/ewe_product1">
+  <table border="0" align="center" height="250" width="450">
+  <tr>
+    <td>Product name</td>
+    <td><input type="text" name="eptextfield" id="textfield" required  class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>Product prize</td>
+    <td><input type="text" name="eptextfield2" id="textfield2" required class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>Product size</td>
+    <td><select name="epselect" id="select" class="form-control">
+      <option>XS</option>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+      <option>XLL</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td>Product description</td>
+    <td><textarea name="eptextarea" id="textarea" cols="45" rows="5" required class="form-control"></textarea></td>
+  </tr>
+  <tr>
+    <td>Product stock</td>
+    <td><input type="text" name="eptextfield3" id="textfield3" required class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>Image</td>
+    <td><input type="file" name="epfileField" id="fileField" required /></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><center><input name="epsubmit" type="submit" value="Submit" class="btn btn-success"/>
+      <input type="submit" name="epsubmit" id="button" value="Cancel" class="btn btn-warning"/>
+    </center></td>
+    </tr>
+</table>
+
+</form>
+{% include "footer.html" %}
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>{% include "entheader.html" %}
+
+	<form>
+	  <table width="300" border="0"class="table table-dark" align="center">
+	    <tbody>
+	      <tr>
+	        <th scope="col">S.No.</th>
+              <th scope="col">Material</th>
+              <th scope="col">Quantity</th>
+	        <th scope="col">Description</th>
+	        <th scope="col">Status</th>
+          </tr>
+	      {% for i in data %}
+    <tr>
+        <th scope="col">{{ loop.index }}}</th>
+        <th scope="col">{{ i['material'] }}</th>
+        <th scope="col">{{ i['quantity'] }}</th>
+        <th scope="col">{{ i['description'] }}</th>
+         <th scope="col">{{ i['status'] }}</th>
+    </tr>
+    {% endfor %}
+        </tbody>
+      </table>
+	</form>
+{% include "footer.html" %}
+
+
+</body>
+</html>

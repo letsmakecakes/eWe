@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+     <script type="text/javascript">
+         function valid()
+        {
+
+            var flag=true;
+
+        if(document.getElementById("kk").value=="")
+	    {
+		flag=false;
+{#		document.getElementById("e").style.visibility="visible";#}
+ 	    }
+    	if(document.getElementById("kk").value > document.getElementById("ll").value)
+	    {
+            alert("Out of stock");
+        }
+       return flag;
+        }
+</script>
+</head>
+
+<body>
+{% include "entheader.html" %}
+
+<form id="form1" name="form1" method="post" action="/add_materials1_req/{{ data['materialid'] }}">
+  <table  border="0" align="center" >
+    <tbody>
+      <tr>
+
+          <th scope="row">Material</th></tr>
+      <tr>
+          <td> {{ data['material'] }}<br><img src="{{ data['pic'] }}" width="150" height="150" class="rounded-circle"/> </td>
+      </tr>
+      <tr>
+
+       <th scope="row" >Quantity</th>
+          <td><input type="number" name="quantity" id="kk" class="form-control" required/> </td>
+       </tr>
+      <tr>
+          <td><input type="hidden" name="ll" id="ll" class="form-control" value="{{ data['stock'] }}"/> </td>
+      </tr>
+     <tr>
+        <td colspan="3" align="center" height="50">
+            <input type="submit" name="sub" id="kkk" class="btn btn-primary" value="Sent Request" onclick="return valid()"/></td>
+{#        <td><a href="/reject_material/{{ i['material_req'] }}" class="btn btn-danger">Reject</a> </td>#}
+      </tr>
+
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

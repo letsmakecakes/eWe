@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+</head>
+
+<body >
+{% include "header.html" %}
+
+<form id="form1" enctype="multipart/form-data" name="form1" method="post" action="/entrepreneur_registeration1">
+
+<table align="center" >
+  <tbody>
+    <tr>
+      <th  scope="row">Name</th>
+      <td >
+      <input type="text" name="ertextfield" id="textfield" required class="form-control"></td>
+    </tr>
+    <tr>
+      <th scope="row">Date of Birth</th>
+      <td>
+      <input type="date" name="erdate" id="date" required class="form-control"></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td>
+      <input type="email" name="ertextfield3" id="textfield3" required class="form-control"></td>
+    </tr>
+    <tr>
+      <th scope="row">Contact Number</th>
+      <td>
+      <input type="number" name="ernumber" id="number" required class="form-control" pattern="[6-9][0-9]{9}"></td>
+    </tr>
+    <tr>
+      <th scope="row">Address</th>
+      <td>
+      <textarea name="ertextarea" id="textarea" required class="form-control"></textarea></td>
+    </tr>
+    <tr>
+      <th scope="row">District</th>
+      <td>
+      <input type="text" name="ertextfield4" id="textfield4" required class="form-control"></td>
+    </tr>
+    <tr>
+      <th scope="row">Pin</th>
+      <td>
+      <input type="number" name="ernumber2" id="number2" required class="form-control" pattern="[0-9]{6}"></td>
+    </tr>
+    <tr>
+      <th scope="row">Working as group ?</th>
+      <td><p>
+        <label>
+          <input type="radio" name="eRadioGroup1" value="Yes" id="RadioGroup1_0">
+          Yes</label>
+        <br>
+        <label>
+          <input type="radio" name="eRadioGroup1" value="No" id="RadioGroup1_1">
+          No</label>
+        <br>
+      </p></td>
+    </tr>
+    <tr>
+      <th scope="row">Profile Image</th>
+      <td>
+      <input type="file" name="erfileField" id="fileField" required></td>
+    </tr>
+{#    <tr>#}
+{#      <th scope="row">Password</th>#}
+{#      <td>#}
+{#      <input type="password" name="urpassword" id="password" required class="form-control"></td>#}
+{#    </tr>#}
+    <tr>
+      <td colspan="2" align="center"><input type="submit" name="ersubmit" id="submit" value="Submit" class="btn btn-primary"></td>
+    </tr>
+  </tbody>
+</table>
+<br>    </form>
+
+{% include "footer.html" %}
+</body>
+</html>
+

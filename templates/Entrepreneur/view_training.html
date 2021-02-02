@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "entheader.html" %}
+<form id="form1" name="form1" method="post" action="/view_training1">
+  <table width="375" border="0" align="center">
+    <tbody>
+      <tr>
+        <th >Session Name</th>
+        <td ><input value="{{ data['session_name'] }}" readonly class="form-control" /></td>
+      </tr>
+      <tr>
+        <th >Session Details</th>
+        <td><input value="{{ data['session_details'] }}" readonly class="form-control" /></td>
+      </tr>
+      <tr>
+        <th >Session Trainee</th>
+        <td><input value="{{ data['trainee'] }}" readonly class="form-control"/></td>
+      </tr>
+      <tr>
+        <th >Trainee Description</th>
+        <td><input value="{{ data['trainee_description'] }}" readonly class="form-control" />&nbsp;</td>
+      </tr>
+      <tr>
+
+        <th align="center" colspan="2">
+        <video controls>
+                <source src="{{ data['file'] }}" type="video/mp4">
+        </video>
+        </th>
+      </tr>
+      <tr>
+{#          <input type="submit" name="back" id="button" value="Back" class="btn btn-dark"></th>#}
+      </tr>
+
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>{% include "entheader.html" %}
+
+<form id="form1" name="form1" method="post">
+  <table border="0" align="center" height="250" width="450">
+    <tbody>
+      <tr>
+        <th scope="row">Material Name</th>
+        <td><label for="textfield"></label>
+        <input type="text" name="textfield" id="textfield" class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row">Description</th>
+        <td><label for="textarea"></label>
+        <textarea name="textarea" id="textarea" class="form-control"></textarea></td>
+      </tr>
+      <tr>
+        <th scope="row"><input type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary"></th>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+
+</body>
+</html>
