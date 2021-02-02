@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post">
+  <table width="398" border="0" class="table table-dark" align="center">
+    <tbody>
+      <tr>
+        <th width="36" scope="col">#</th>
+        <th width="39" scope="col">Name</th>
+        <th width="50" scope="col">Emailid</th>
+        <th width="71" scope="col">Date of Birth</th>
+        <th width="68" scope="col">More</th>
+      </tr>
+      {% for i in data %}
+      <tr>
+        <th scope="col">{{ loop.index }}&nbsp;</th>
+        <th scope="col">{{ i['entrepreneur_name'] }}
+            <br><img src="{{ i['profile_image'] }}"  height="100" width="100" alt="no image" class="rounded-circle"/>
+        </th>
+        <th scope="col">{{ i['emailid'] }}&nbsp;</th>
+        <th scope="col">{{ i['date_of_birth'] }}&nbsp;</th>
+        <th scope="col"><a href="/vm_ent/{{ i['entrepreneur_id'] }}" class="btn btn-primary">View more</a> &nbsp;</th>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

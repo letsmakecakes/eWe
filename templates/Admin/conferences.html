@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post">
+  <table width="312" border="0" class="table table-dark">
+    <tbody>
+        <th scope="col">#</th>
+        <th scope="col">Conference Name</th>
+        <th scope="col">More</th>
+      </tr>
+    {% for i in data %}
+    <tr>
+        <th scope="col">{{ loop.index }}</th>
+        <th scope="col">{{ i['conference_name'] }}</th>
+        <th scope="col"><a href="/conferences1/{{ i['conferenceid'] }}">View more</a> &nbsp;</th>
+    </tr>
+    {% endfor %}
+ </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

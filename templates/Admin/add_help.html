@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="/add_help1">
+  <table border="0" align="center" height="250" width="450">
+    <tbody>
+      <tr>
+        <th scope="col">Name</th>
+        <th><input type="text" name="name" id="textfield" required class="form-control"></th>
+      </tr>
+      <tr>
+        <th>Email id</th>
+        <td><input type="email" name="email" id="textfield" required class="form-control"></td>
+      </tr>
+      <tr>
+        <th >Contact Number</th>
+        <td>
+        <input type="tel" name="num" id="date" required class="form-control" prefix="+91" pattern="[6-9][0-9]{9}"></td>
+      </tr>
+      <tr>
+        <td height="70" colspan="2" align="center"><input type="submit" name="nsubmit" id="submit" value="SUBMIT" class="btn btn-success">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

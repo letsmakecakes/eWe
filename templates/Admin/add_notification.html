@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="/add_notification1">
+  <table border="0" align="center" height="250" width="450">
+    <tbody>
+      <tr>
+        <th scope="col">Title</th>
+        <th><input type="text" name="ntextfield" id="textfield" required class="form-control"></th>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td><label for="textarea"></label>
+        <textarea name="ntextarea" id="textarea" required class="form-control"></textarea></td>
+      </tr>
+{#      <tr>#}
+{#        <th height="30">Date</th>#}
+{#        <td><label for="datetime"></label>#}
+{#        <input type="date" name="ndate" id="date" required class="form-control"></td>#}
+{#      </tr>#}
+      <tr>
+        <td height="70" colspan="2" align="center"><input type="submit" name="nsubmit" id="submit" value="Submit" class="btn btn-success">
+        <input type="submit" name="nsubmit" id="button" value="Cancel" class="btn btn-warning"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

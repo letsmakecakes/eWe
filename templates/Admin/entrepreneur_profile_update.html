@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>{% include "header.html" %}
+
+<form id="form1" enctype="multipart/form-data" name="form1" method="post" action="/entrepreneur_profile_update1/{{ data['entrepreneur_id'] }}">
+
+  <table border="0" align="center" height="250" width="450">
+  <tbody>
+    <tr>
+      <th  scope="row">Name</th>
+      <td >
+      <input type="text" name="ertextfield" id="textfield" value="{{ data['entrepreneur_name'] }}" class="form-control"></td>
+    </tr>
+    <tr>
+      <th scope="row">Date of Birth</th>
+      <td>
+      <input type="date" name="erdate" id="date" value="{{ data['date_of_birth'] }}" class="form-control"></td>
+    </tr>
+    <tr>
+      <th scope="row">Contact Number</th>
+      <td>
+      <input type="number" name="ernumber" id="number" value="{{ data['phone_no'] }}" class="form-control" pattern="[6-9][0-9]{9}"></td>
+    </tr>
+    <tr>
+      <th scope="row">Address</th>
+      <td>
+      <textarea name="ertextarea" id="textarea" class="form-control">{{ data['place']}}</textarea></td>
+    </tr>
+    <tr>
+      <th scope="row">District</th>
+      <td>
+      <input type="text" name="ertextfield4" id="textfield4" value="{{ data['district'] }}" class="form-control"></td>
+    </tr>
+    <tr>
+      <th scope="row">Pin</th>
+      <td>
+      <input type="number" name="ernumber2" id="number2" value="{{ data['pin'] }}" class="form-control" pattern="[0-9]{6}"></td>
+    </tr>
+    <tr>
+      <th scope="row">Working as group?</th>
+      <td><p>
+        <label>
+          <input type="radio" name="eRadioGroup1" value="Yes" id="RadioGroup1_0" {% if data['group']=="Yes" %}checked{%  endif %}>
+          Yes</label>
+        <br>
+        <label>
+          <input type="radio" name="eRadioGroup1" value="No" id="RadioGroup1_1" {% if data['group']=="No" %}checked{%  endif %}>
+          No</label>
+        <br>
+      </p></td>
+    </tr>
+    <tr>
+      <th scope="row">Profile Image</th>
+      <td>
+      <input type="file" name="erfileField" id="fileField"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><input type="submit" name="ersubmit" id="submit" value="Save" class="btn btn-success"></td>
+    </tr>
+  </tbody>
+</table>
+    </form>
+{% include "footer.html" %}
+
+
+</body>
+</html>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post">
+  <table width="312" border="0" class="table table-dark">
+    <tbody>
+      <tr>
+        <th width="36" scope="col">#</th>
+        <th width="65" scope="col">Date</th>
+        <th width="70" scope="col">Customer Name</th>
+        <th width="57" scope="col">Product Name</th>
+        <th width="50" scope="col">Review</th>
+{#        <th width="65" scope="col">Rating</th>#}
+      </tr>
+      {% for i in data %}
+      <tr>
+        <th width="36" scope="col">{{ loop.index }}</th>
+        <th width="65" scope="col">{{ i['date'] }}</th>
+        <th width="70" scope="col">{{ i['customer_name'] }}</th>
+        <th width="57" scope="col">{{ i['product_name'] }}</th>
+        <th width="50" scope="col">{{ i['review'] }}</th>
+{#        <th width="65" scope="col">{{ i['rating'] }}</th>#}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

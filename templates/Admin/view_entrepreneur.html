@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="/view_entrepreneur1/{{ data['entrepreneur_id'] }}">
+  <table width="330" height="392" border="0" align="center">
+    <tbody>
+    <tr>
+      <td colspan="2" align="center">
+          <img src="{{ data['profile_image'] }}"  height="100" width="100" alt="no image" class="rounded-circle"/>
+      </td>
+  </tr>
+      <tr>
+        <th  scope="row">Name</th>
+          <td width="165">{{ data['entrepreneur_name'] }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Emailid</th>
+        <td>{{ data['emailid'] }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Date of Birth</th>
+        <td>{{ data['date_of_birth'] }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Phone</th>
+        <td>{{ data['phone_no'] }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Place</th>
+        <td>{{ data['place'] }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Post</th>
+        <td>{{ data['pin'] }}</td>
+      </tr>
+      <tr>
+        <th scope="row">District</th>
+        <td>{{ data['district'] }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">Group</th>
+        <td>{{ data['group'] }}</td>
+      </tr>
+      <tr>
+        <td height="50" align="center" colspan="2" scope="row">
+              <a href="/edit_profile1/{{ data['entrepreneur_id'] }}" class="btn btn-warning">EDIT</a>
+            <input type="submit" name="delete" id="delete" value="Delete" class="btn btn-danger">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

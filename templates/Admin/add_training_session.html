@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "header.html" %}
+
+<form method="post" enctype="multipart/form-data" name="form1" id="form1" action="/add_trainig_session1">
+  <table border="0" align="center" height="250" width="470">
+    <tbody>
+      <tr>
+        <th scope="row">Session Name</th>
+        <td><label for="textfield"></label>
+        <input type="text" name="stextfield" id="textfield" required class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row">Session Details</th>
+        <td><label for="textarea"></label>
+        <textarea name="stextarea" id="textarea" required class="form-control"></textarea></td>
+      </tr>
+      <tr>
+        <th scope="row">Session Trainee</th>
+        <td><label for="textfield2"></label>
+        <input type="text" name="stextfield2" id="textfield2" required class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row">Trainee Description</th>
+        <td><label for="textarea2"></label>
+        <textarea name="stextarea2" id="textarea2" required class="form-control"></textarea></td>
+      </tr>
+      <tr>
+        <th scope="row" height="50">Session File</th>
+        <th scope="row"><label for="fileField"></label>
+        <input type="file" name="ff" id="fileField" required ></th>
+      </tr>
+      <tr>
+        <td height="80" colspan="2" align="center"><input type="submit" name="ssubmit" id="submit" value="Submit" class="btn btn-success">
+        <input type="submit" name="ssubmit" id="button" value="Cancel" class="btn btn-warning"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

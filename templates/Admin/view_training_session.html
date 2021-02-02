@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="/view_training_session1/{{ data['session_no'] }}">
+  <table  border="0" align="center" >
+    <tbody>
+      <tr>
+        <th  scope="row">Session Name</th>
+        <td >{{ data['session_name'] }}</td>
+
+      </tr>
+      <tr>
+        <th scope="row">Session Details</th>
+        <td >{{ data['session_details'] }}&nbsp;</td>
+      </tr>
+      <tr>
+        <th scope="row">Session Trainee</th>
+        <td>{{ data['trainee'] }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Trainee Description</th>
+        <td>{{ data['trainee_description']  }}</td>
+      </tr>
+      <tr>
+{#        <th scope="row">Session File</th>#}
+        <th scope="row" colspan="2" align="center"><video controls>
+  <source src="{{ data['file'] }}" type="video/mp4" height="100" width="100">
+</video></th>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" name="delete" id="delete" value="Delete" class="btn btn-danger">
+          <input type="submit" name="delete" id="button" value="Cancel" class="btn btn-warning"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

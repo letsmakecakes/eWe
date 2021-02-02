@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="/update_stock/{{ data['materialid'] }}" enctype="multipart/form-data">
+  <table border="0" align="center" height="250" width="450">
+    <tbody>
+      <tr>
+        <th height="30">Stock</th>
+        <td><label for="datetime"></label>
+        <input type="number" name="stock" id="stock" required class="form-control" value="{{ data['stock'] }}"></td>
+      </tr>
+      <tr>
+        <td height="70" colspan="2" align="center"><input type="submit" name="nsubmit" id="submit" value="UPDATE" class="btn btn-success">
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

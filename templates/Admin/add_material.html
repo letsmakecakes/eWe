@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="/add_materials1" enctype="multipart/form-data">
+  <table border="0" align="center" height="250" width="450">
+    <tbody>
+      <tr>
+        <th scope="col">Material</th>
+        <td><input type="text" name="mat" id="textfield" required class="form-control"></td>
+      </tr>
+      <tr>
+        <th>Material Description</th>
+        <td><label for="textarea"></label>
+        <textarea name="desc" id="textarea" required class="form-control"></textarea></td>
+      </tr>
+      <tr>
+        <th height="30">Pic</th>
+        <td><label for="datetime"></label>
+        <input type="file" name="file" id="file" required ></td>
+      </tr>
+      <tr>
+        <th height="30">Stock</th>
+        <td><label for="datetime"></label>
+        <input type="number" name="stock" id="stock" required class="form-control"></td>
+      </tr>
+      <tr>
+        <td height="70" colspan="2" align="center"><input type="submit" name="nsubmit" id="submit" value="Submit" class="btn btn-success">
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post">
+  <table align="center" border="0" width="100" class="table table-dark">
+    <tbody>
+      <tr>
+        <th >#</th>
+        <th >Session Name</th>
+        <th >Trainee</th>
+        <th >Action</th>
+      </tr>
+    {% for i in data %}
+    <tr>
+        <th >{{ loop.index }}</th>
+        <th >{{ i['session_name'] }}</th>
+        <th >{{ i['trainee'] }}</th>
+        <th ><a href="/training_sessions1/{{ i['session_no'] }}" class="btn btn-primary">View more</a> &nbsp;</th>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</form>
+{% include "footer.html" %}
+
+</body>
+</html>
