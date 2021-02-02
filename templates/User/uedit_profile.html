@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "userheader.html" %}
+
+<form id="form1" name="form1" method="post" enctype="multipart/form-data" action="/uedit_profile1">
+  <table width="331" border="0" align="center">
+    <tbody>
+      <tr>
+        <th scope="row">Name</th>
+         <td> <input type="text" name="urtextfield" id="textfield" value="{{ data['customer_name'] }}" class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row">Date of birth</th>
+        <td> <input type="date" name="urdate" id="date" value="{{ data['date_of_birth'] }}" class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row">Contact Number</th>
+        <td> <input type="number" name="urnumber" id="number" value="{{ data['phoneno'] }}" class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row">Place</th>
+        <td><textarea name="urtextarea" id="textarea" class="form-control">{{ data['place']}}</textarea></td>
+      </tr>
+      <tr>
+        <th scope="row">District</th>
+        <td><input type="text" name="urtextfield4" id="textfield4" value="{{ data['district'] }}" class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row">Pin</th>
+        <td><input type="number" name="urnumber2" id="number2" value="{{ data['pin'] }}" class="form-control">
+      </tr>
+      <tr>
+        <th scope="row">State</th>
+        <td><input type="text" name="urtextfield5" id="textfield4" value="{{ data['state'] }}" class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row">Profile Image</th>
+        <td><input type="file" name="urfileField6" id="fileField"></td>
+      </tr>
+      <tr>
+        <td scope="row" align="center"><input type="submit" name="ursubmit" id="button" value="Save" class="btn btn-success"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>{% include "footer.html" %}
+
+</body>
+</html>

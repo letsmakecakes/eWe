@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>{% include "userheader.html" %}
+
+<form id="form1" name="form1" method="post" action="/add_to_cart/{{ data['product_id']  }}">
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="2"><img src="{{ data['product_image'] }}" width="100" height="100" class="rounded-circle"></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>{{ data['product_name'] }}</td>
+      </tr>
+      <tr>
+        <td>Size</td>
+        <td>{{ data['product_size'] }}&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Stock</td>
+        <td>{{ data['product_stock'] }}&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>{{ data['product_description'] }}&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Prize</td>
+        <td>{{ data['product_prize'] }}&nbsp;</td>
+      </tr>
+      <tr><td>Quantity</td>
+          <td><input type="text" name="text1" class="form-control"></td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><input type="submit" name="button" id="button" value="Add to Cart" class="btn btn-primary"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>{% include "footer.html" %}
+
+</body>
+</html>

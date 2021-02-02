@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>{% include "userheader.html" %}
+{#<div class="card">#}
+<form id="form1" name="form1" method="post" enctype="multipart/form-data" action="/uedit_profile">
+  <table width="331" border="0" align="center">
+    <tbody>
+     <tr>
+{#        <th scope="row">Profile Image:</th>#}
+        <td colspan="2" align="center"><img src="{{ data['profile_image'] }}" height="100" width="100" class="rounded-circle"></td>
+      </tr>
+      <tr>
+        <th scope="row">Name</th>
+        <td ><input value="{{ data['customer_name']  }}" readonly class="form-control"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Date of birth</th>
+        <td><input value="{{ data['date_of_birth'] }}" readonly class="form-control"/></td>
+      </tr>
+      <tr>
+        <th scope="row">EmailId</th>
+        <td><input value="{{ data['emailid'] }}" readonly class="form-control"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Contact Number</th>
+        <td><input value="{{ data['phoneno'] }}"readonly class="form-control"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Place</th>
+        <td><input value="{{ data['place'] }}" readonly class="form-control"/></td>
+      </tr>
+      <tr>
+        <th scope="row">District</th>
+        <td><input value="{{ data['district'] }}" readonly class="form-control"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Pin</th>
+        <td><input value="{{ data['pin'] }}" readonly class="form-control"/></td>
+      </tr>
+      <tr>
+        <th scope="row">State</th>
+        <td><input value="{{ data['state'] }}" readonly class="form-control"/></td>
+      </tr>
+
+      <tr>
+        <td scope="row" align="center" colspan="2"><input type="submit" name="ursubmit" id="button" value="Edit" class="btn btn-primary"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+{% include "footer.html" %}
+
+</body>
+</html>
