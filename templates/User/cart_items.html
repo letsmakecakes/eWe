@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% include "userheader.html" %}
+<form id="form1" name="form1" method="post" action="/payment/{{ day }}">
+  <table width="200" border="0" align="center" class="table table-dark">
+    <tbody>
+      <tr>
+        <th scope="col">S.No.</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Prize</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total</th>
+      </tr>
+
+    {% for i in  data %}
+      <tr>
+        <th width="36" scope="col">{{ loop.index }}</th>
+        <th width="39" scope="col">{{ i['product_name'] }}</th>
+      <th width="50" scope="col">{{ i['product_prize'] }}</th>
+      <th width="50" scope="col">{{ i['quantity'] }}</th>
+      <th width="50" scope="col">{{ i['p'] }}</th>
+      <th><a href="/delete_cart_item/{{ i['product_id'] }}" class="btn btn-danger">Delete</a> </th>
+      </tr>
+
+    {% endfor %}
+
+      <tr><th colspan="4">Total Amount = {{ sum }}  </th></tr>
+      <tr><th colspan="4"><input type="submit" name="n" value="Buy" class="btn btn-primary"></th></tr>
+    </tbody>
+  </table>
+</form>{% include "footer.html" %}
+
+</body>
+</html>
