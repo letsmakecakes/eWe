@@ -1,6 +1,5 @@
 # Empowerment of Women Entrepreneurship (eWe)
 
-![eWe Logo](link-to-your-logo-image)
 
 Empowerment of Women Entrepreneurship (eWe) is a platform dedicated to empowering young girls and women by providing them with the necessary tools and resources to become successful entrepreneurs. Our primary focus is on equipping underprivileged women in rural societies with the skills and support they need to take on more productive roles in their homes and communities. Through eWe, we aim to increase entrepreneurship among women, particularly in the textile industry.
 
