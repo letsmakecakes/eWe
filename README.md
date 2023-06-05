@@ -76,3 +76,7 @@ We welcome contributions to improve the eWe platform. If you would like to contr
 2. Create a new branch for your feature or bug fix.
 3. Commit your changes and push them to your branch.
 4. Submit a pull request, explaining the changes you have made.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify it according to your needs.
